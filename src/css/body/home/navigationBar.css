@@ -1,0 +1,16 @@
+.my-navbar{
+    padding: 0 50px;
+    line-height: 40px;
+}
+
+.my-navbar .navbar-brand, .my-navbar .nav-link{
+    color: white !important;
+}
+
+.my-navbar .navbar-brand{
+    font-weight: 700;
+}
+
+.my-navbar .nav-link{
+    font-weight: 500;
+}

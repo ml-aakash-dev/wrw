@@ -1,0 +1,47 @@
+.about-us{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+.about-us .bgimg{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../../../assets/about-us/about-us.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.about-us .image-wrapper{
+    width: 100%;
+    min-height: 100vh;
+    /* background-color: #f36621; */
+    background-color: #f3672152;
+    background-attachment: fixed;
+}
+
+.about-us .content{
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    color: white;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+.about-us .content h1{
+    position: absolute;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 80px;
+    font-weight: 700;
+    text-align: center;
+}
