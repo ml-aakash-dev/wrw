@@ -67,3 +67,9 @@
 .customer-reviews .reviews-slider .out:focus{
     outline: none;
 }
+
+@media(max-width:576px){
+    .customer-reviews .content h1{
+        font-size: 50px;
+    }
+}
