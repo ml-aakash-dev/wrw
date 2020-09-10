@@ -1,6 +1,18 @@
 .my-navbar{
+    position: relative;
+    z-index: 1000;
+    background-color: white;
     padding: 0 50px;
     line-height: 40px;
+    width: 100%;
+    transition:1s ;
+    -moz-transition:1s;
+    -webkit-transition:1s;
+}
+.state2.my-navbar{
+    background-color: white;
+    box-shadow: 0 12px 6px rgba(0,0,0,.06);
+    top: 0;
 }
 
 .my-navbar .navbar-brand, .my-navbar .nav-link{
@@ -13,4 +25,63 @@
 
 .my-navbar .nav-link{
     font-weight: 500;
+}
+.my-navbar .nav-link:hover{
+    color: #f36621 !important;
+}
+
+.my-navbar .navbar-toggler{
+    border: none;
+    color: white;
+}
+.my-navbar .navbar-toggler .toggle-icon{
+    color: white;
+}
+.my-navbar button:focus{
+    outline: none;
+}
+.my-navbar{
+    background-color: white;
+}
+.my-navbar .navbar-brand{
+    color: black !important;
+}
+.my-navbar .nav-link{
+    color: black !important;
+}
+.my-navbar .navbar-toggler .toggle-icon{
+    color: black;
+}
+
+
+@media(min-width:992px){
+    .my-navbar{
+        background-color: transparent;
+    }
+    
+    .state2.my-navbar .navbar-brand{
+        color: black !important;
+    }
+    .state1.my-navbar .navbar-brand{
+        color: white !important;
+    }
+    
+    .state2.my-navbar .nav-link{
+        color: black !important;
+    }
+    .state1.my-navbar .nav-link{
+        color: white !important;
+    }
+    .my-navbar .nav-link:hover{
+        color: #f36621 !important;
+    }
+}
+
+@media(max-width:576px){
+    .my-navbar{
+        padding: 0 20px;
+    }
+    .my-navbar .navbar-brand{
+        font-size: 20px;
+    }
 }

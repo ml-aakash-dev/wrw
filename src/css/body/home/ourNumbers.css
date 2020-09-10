@@ -1,0 +1,94 @@
+.our-numbers{
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.our-numbers .bgimg{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../../../assets/header/our-numbers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.our-numbers .image-wrapper{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.our-numbers .content{
+    color: #f1f1f1;
+    overflow: hidden;
+    padding: 80px 0;
+}
+
+.our-numbers .content h1{
+    font-size: 80px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+  .our-numbers .background-l{
+    background-color: rgba(97, 94, 90, 0.5) !important;
+  }
+  .our-numbers .background-d{
+    background-color: rgba(14, 14, 15, 0.7) !important;
+  }
+  .our-numbers .background-10-light {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.our-numbers .col{
+    padding: 60px 0;
+}
+
+.our-numbers .counter{
+    font-size: 45px;
+    line-height: 78px;
+    font-weight: 600;
+}
+
+.our-numbers h3{
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-top: 11px;
+    margin-bottom: 0px;
+    font-size: 13px;
+    line-height: 22px;
+}
+
+  @media(max-width: 767px){
+    .our-numbers .content h1{
+      font-size: 4rem;
+      margin-bottom: 40px;
+    }
+  }
+
+  @media(max-width: 1000px) and (orientation: landscape){
+    .our-numbers .content h1{
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media(max-width: 576px){
+      .our-numbers{
+          /* height: 200vh; */
+      }
+    .our-numbers .content h1{
+      font-size: 50px;
+      margin-bottom: 20px;
+      padding: 0 20px;
+    }
+  }

@@ -4,6 +4,7 @@ import './App.css';
 
 import Main from './components/main'
 import AboutUs from './components/aboutUs/aboutUs'
+import customerReviews from './components/customerReviews/customerReviews'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Main}/>
           <Route exact path="/about-us" component={AboutUs}/>
+          <Route exact path="/customer-reviews" component={customerReviews}/>
         </Switch>
       </Router>
     </>

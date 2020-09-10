@@ -37,11 +37,16 @@
 
 .header .content h1{
     position: absolute;
-    position: absolute;
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     font-size: 80px;
     font-weight: 700;
     text-align: center;
+}
+
+@media(max-width:576px){
+    .header .content h1{
+        font-size: 50px;
+    }
 }
