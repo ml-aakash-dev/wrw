@@ -18,16 +18,18 @@ import Video5 from '../../assets/customer-reviews/reviews/5.mp4'
 import Video6 from '../../assets/customer-reviews/reviews/6.mp4'
 
 import NavigationBar from '../home/navigationBar'
+import GalleryModal from './galleryModal'
 import '../../css/body/customerReviews/customerReviews.css'
 
 class customerReviews extends Component {
     constructor(props){
         super(props)
         this.state={
+            filteredModal:[],
             reviews:[
                 {
                     id: 1,
-                    firstname: "Whole Cell",
+                    firstname: "Boost",
                     lastname: "Customer",
                     desc: "I just purchased Iphone Xr with 2 phone cases, great service come on down to get you one, bring your friends and family",
                     image: Img1,
@@ -37,7 +39,7 @@ class customerReviews extends Component {
                 },
                 {
                     id: 2,
-                    firstname: "Whole Cell",
+                    firstname: "Boost",
                     lastname: "Customer",
                     desc: "came to whole cell accessories to get my daughter a phone for her birthday, leaving with 2 phones thanks to all, customer service is great and will recommend it to anyone",
                     image: Img2,
@@ -47,7 +49,7 @@ class customerReviews extends Component {
                 },
                 {
                     id: 3,
-                    firstname: "Whole Cell",
+                    firstname: "Boost",
                     lastname: "Customer",
                     desc: "just want everybody know to come to accessories for tablets, staff takes care of you come see them",
                     image: Img3,
@@ -57,7 +59,7 @@ class customerReviews extends Component {
                 },
                 {
                     id: 4,
-                    firstname: "Whole Cell",
+                    firstname: "Boost",
                     lastname: "Customer",
                     desc: "please come on down to boost mobile store, if you have any trouble with the phone or looking for a good deal they'll take care of you",
                     image: Img4,
@@ -67,7 +69,7 @@ class customerReviews extends Component {
                 },
                 {
                     id: 5,
-                    firstname: "Whole Cell",
+                    firstname: "Boost",
                     lastname: "Customer",
                     desc: "I'm here at boost mobile in Lansing just got my new phone man, great service, great people, come on down to check them out",
                     image: Img5,
@@ -77,7 +79,7 @@ class customerReviews extends Component {
                 },
                 {
                     id: 6,
-                    firstname: "Whole Cell",
+                    firstname: "Boost",
                     lastname: "Customer",
                     desc: "I just wanna give shout out to my boost people here in Lansing you know they hook me up with the phone and they got nice deals, nice employees here and I recommend that you go there",
                     image: Img6,
@@ -88,15 +90,38 @@ class customerReviews extends Component {
             ]
         }
     }
+
+    toggleVideoModal = (id) => {
+        this.setState({
+            filteredModal: this.state.reviews.filter(review => 
+                review.id === id
+                )
+        })
+        document.getElementById('customer-reviews-modal').style.display="block"
+        document.body.style.overflow="hidden"
+    }
+
+    clearState = () => {
+        this.setState({
+            filteredModal: null
+        })
+    }
     render() {
         let settings = {
-            infinite: true,
+            infinite: false,
             speed: 1000,
             arrows:true,
-            slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToShow: 4,
+            slidesToScroll: 4,
         
             responsive: [
+                {
+                    breakpoint: 1300,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                    }
+                },
               {
                 breakpoint: 1100,
                 settings: {
@@ -129,8 +154,11 @@ class customerReviews extends Component {
                                     <Slider {...settings}>
                                     {this.state.reviews.map((review,key)=>(
                                             <div className="out" key={review.id}>
-
-                                                <img alt={"reviews"} src={review.image}/>
+                                            <div key={key} className="video-container">
+                                                <img className="video" src={review.image} alt="reviews"/>
+                                                <div className="video-wrapper" onClick={() => this.toggleVideoModal(review.id)}><i className="far fa-play-circle video-icon"></i></div>
+                                            </div>
+                                                {/* <img alt={"reviews"} src={review.image}/> */}
                                             </div>
                                         ))}
                                     </Slider>
@@ -138,6 +166,12 @@ class customerReviews extends Component {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div id="customer-reviews-modal">
+                    <GalleryModal 
+                    filteredModal= {this.state.filteredModal}
+                    clearState={this.clearState}
+                    />
                 </div>
             </div>
         )
