@@ -15,8 +15,17 @@
     top: 0;
 }
 
+.my-navbar .logo{
+    width: 100px;
+    height: 100px;
+}
+
 .my-navbar .navbar-brand, .my-navbar .nav-link{
     color: white !important;
+}
+.my-navbar .navbar-brand{
+    padding: 0;
+    margin: 0;
 }
 
 .my-navbar .navbar-brand{
@@ -51,6 +60,7 @@
 }
 .my-navbar .navbar-toggler .toggle-icon{
     color: black;
+    font-size: 25px;
 }
 
 

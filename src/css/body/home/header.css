@@ -20,7 +20,7 @@
     width: 100%;
     min-height: 100vh;
     /* background-color: #f36621; */
-    background-color: #f3672152;
+    background-color: #f3672127;
     background-attachment: fixed;
 }
 
@@ -44,9 +44,22 @@
     font-weight: 700;
     text-align: center;
 }
+.header .content .header-logo{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    width: 500px;
+    height: 500px;
+}
 
 @media(max-width:576px){
     .header .content h1{
         font-size: 50px;
+    }
+    .header .content .header-logo{
+        width: 250px;
+        height: 250px;
     }
 }

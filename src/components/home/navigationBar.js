@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import {Nav, Navbar} from 'react-bootstrap'
+import WhiteLogo from '../../assets/logo-white-shadow.png'
+import BlackLogo from '../../assets/logo-black-shadow.png'
 
 import '../../css/body/home/navigationBar.css'
 
@@ -44,7 +46,9 @@ class navigationBar extends Component {
     render() {
         return (
             <Navbar id="my-navbar" className={this.state.navState} expand="lg">
-                <Navbar.Brand href="/">WE ARE WIRELESS</Navbar.Brand>
+                <Navbar.Brand href="/"><img className="logo" 
+                src={this.state.navState=="state1 my-navbar" && window.innerWidth>991 ? WhiteLogo : this.state.navState=="state2 my-navbar" ? BlackLogo :  window.innerWidth<992 ? BlackLogo : ""} 
+                alt="logo" /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" children={this._getNavbarToggleIcon()} onClick={this._onNavbarToggleClick}/>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
